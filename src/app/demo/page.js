@@ -110,7 +110,7 @@ export default function DemoSelector() {
         <div className="mt-16 text-center bg-slate-900/50 border border-teal-500/20 rounded-xl p-8">
           <h2 className="text-2xl font-bold mb-4">Want a Custom Analysis?</h2>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Get a comprehensive AI discovery analysis tailored to your company's specific challenges and opportunities.
+            Get a comprehensive AI discovery analysis tailored to your tailored to your company&apos;s specific challenges and opportunities.
           </p>
           <Link 
             href="/#services"
