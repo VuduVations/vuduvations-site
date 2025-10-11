@@ -40,8 +40,8 @@ export default function DemoPage() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Demo Not Found</h1>
-          <Link href="/demo" className="text-teal-400 hover:text-teal-300">
-            Back to Demos
+          <Link href="/ai-discovery" className="text-teal-400 hover:text-teal-300">
+            Back to All Demos
           </Link>
         </div>
       </div>
@@ -52,7 +52,7 @@ export default function DemoPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto p-6">
         <div className="mb-6">
-          <Link href="/demo" className="text-teal-400 hover:text-teal-300 mb-4 inline-block">
+          <Link href="/ai-discovery" className="text-teal-400 hover:text-teal-300 mb-4 inline-block">
             Back to All Demos
           </Link>
         </div>

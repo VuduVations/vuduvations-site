@@ -1,4 +1,4 @@
-// src/app/demo/page.js
+// src/app/ai-discovery/page.js
 
 'use client'
 
@@ -58,7 +58,7 @@ export default function DemoSelector() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <Link href="/" className="text-teal-400 hover:text-teal-300 mb-4 inline-block">
+          <Link href="/#apps" className="text-teal-400 hover:text-teal-300 mb-4 inline-block">
             ← Back to Home
           </Link>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -75,7 +75,7 @@ export default function DemoSelector() {
           {demos.map((demo) => (
             <Link
               key={demo.id}
-              href={`/demo/${demo.id}`}
+              href={`/ai-discovery/${demo.id}`}
               className="bg-slate-900/50 border border-teal-500/20 rounded-xl p-6 hover:border-teal-500 hover:shadow-xl hover:shadow-teal-500/10 transition-all group"
             >
               <h3 className="text-2xl font-bold mb-2 group-hover:text-teal-400 transition-colors">
