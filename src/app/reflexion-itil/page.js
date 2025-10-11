@@ -251,7 +251,7 @@ ${iteration.iteration === 3 ? `
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <a href="/" className="text-purple-300 hover:text-purple-100 mb-4 inline-block">
+          <a href="/#apps" className="text-purple-300 hover:text-purple-100 mb-4 inline-block">
             ← Back to Portfolio
           </a>
           <h1 className="text-4xl font-bold text-white mb-2">
@@ -301,7 +301,7 @@ ${iteration.iteration === 3 ? `
             disabled={isProcessing}
             className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all flex items-center justify-center gap-2 ${
               isProcessing
-                ? 'bg-gray-600 cursor-not-allowed'
+                ? 'bg-gradient-to-r from-purple-700 to-pink-700 cursor-wait text-white'
                 : 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white'
             }`}
           >
@@ -656,6 +656,22 @@ ${iteration.iteration === 3 ? `
                 </div>
               );
             })}
+
+            {/* CTA FOOTER - After all iterations */}
+            <div className="mt-16 bg-gradient-to-br from-purple-900/50 via-slate-900/50 to-purple-900/50 rounded-lg p-8 md:p-12 border border-white/20 text-center">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Ready for Your Custom ITIL Analysis?
+              </h2>
+              <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+                This demo shows what's possible. Get a tailored Reflexion ITIL analysis for your organization's change management process.
+              </p>
+              <a
+                href="/#contact"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white h-12 px-8 text-lg"
+              >
+                View Services & Pricing
+              </a>
+            </div>
           </div>
         )}
       </div>
