@@ -211,11 +211,11 @@ function ProjectHighlights() {
       tags: ["LangGraph", "Reflexion", "ITIL"]
     },
     {
-      title: "Coming Soon",
-      blurb: "Building intelligent systems that augment human capability. Next project in development — stay tuned.",
-      href: "#",
-      meta: "In Development",
-      tags: ["AI", "Innovation"]
+      title: "Live Sales Call Analyzer",
+      blurb: "Real-time LangGraph multi-tier intelligence for sales transcript analysis. Observable execution path with cost tracking and conditional routing across GPT-4 and Claude tiers.",
+      href: "/consulting-analyzer",
+      meta: "Active • v1.0",
+      tags: ["LangGraph", "Multi-Tier", "Consulting"]
     },
   ];
 
@@ -346,7 +346,7 @@ function Footer() {
         <div className="flex flex-col items-center gap-3 text-center">
           <div className="w-full border-t my-2"></div>
           <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Vuduvations. Built by a one-person studio.</p>
-          <p className="text-[11px] text-muted-foreground">Design motif: semantic orbits · Code, data, and clarity.</p>
+          <p className="text-[11px] text-muted-foreground">Born of Vudu</p>
         </div>
       </div>
     </footer>
