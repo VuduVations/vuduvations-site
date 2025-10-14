@@ -99,7 +99,7 @@ function AboutContent() {
 
       {/* What Vuduvations Builds */}
       <section>
-        <h2 className="text-3xl font-bold mb-4">What Vuduvations Build</h2>
+        <h2 className="text-3xl font-bold mb-4">What Vuduvations Builds</h2>
         <p className="text-muted-foreground leading-relaxed mb-6">
           Vuduvations specializes in <strong>bespoke AI solutions</strong> that turn insight into action:
         </p>
