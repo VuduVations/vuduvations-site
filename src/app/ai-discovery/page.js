@@ -2,7 +2,10 @@
 
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
+import ContactModal from '@/components/ContactModal'
+import { Brain, Target, TrendingUp, BarChart3 } from 'lucide-react'
 
 const demos = [
   {
@@ -53,14 +56,45 @@ const demos = [
 ]
 
 export default function DemoSelector() {
+  const [showModal, setShowModal] = useState(false)
+
+  const aiDiscoveryBenefits = [
+    { 
+      text: "Complete multi-dimensional AI readiness assessment across your organization",
+      icon: <Target className="w-5 h-5" />
+    },
+    { 
+      text: "Executive-ready ROI projections and use case mapping with competitive positioning",
+      icon: <TrendingUp className="w-5 h-5" />
+    },
+    { 
+      text: "Strategic roadmap with implementation priorities and resource requirements",
+      icon: <BarChart3 className="w-5 h-5" />
+    },
+    { 
+      text: "Industry-specific insights from F500 consulting best practices",
+      icon: <Brain className="w-5 h-5" />
+    }
+  ]
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900 text-white py-12 px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <Link href="/#apps" className="text-teal-400 hover:text-teal-300 mb-4 inline-block">
-            ← Back to Home
+        {/* Back to Home Link */}
+        <div className="mb-6">
+          <Link 
+            href="/"
+            className="inline-flex items-center gap-2 text-green-400 hover:text-blue-300 transition-colors"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Back to Portfolio
           </Link>
+        </div>
+
+        {/* Header Section */}
+        <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Interactive Demo Analyses
           </h1>
@@ -110,16 +144,27 @@ export default function DemoSelector() {
         <div className="mt-16 text-center bg-slate-900/50 border border-teal-500/20 rounded-xl p-8">
           <h2 className="text-2xl font-bold mb-4">Want a Custom Analysis?</h2>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Get a comprehensive AI discovery analysis tailored to your tailored to your company&apos;s specific challenges and opportunities.
+            Get a comprehensive AI discovery analysis tailored to your company's specific challenges and opportunities.
           </p>
-          <Link 
-            href="/#services"
-            className="inline-block bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold transition-all"
+          
+          <button
+            onClick={() => setShowModal(true)}
+            className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all text-lg"
           >
-            View Services & Pricing
-          </Link>
+            Request Custom Analysis
+          </button>
         </div>
       </div>
+
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+        appName="AI Discovery Dashboard"
+        appIcon={<Brain className="w-8 h-8" />}
+        benefits={aiDiscoveryBenefits}
+        ctaText="Request Custom AI Analysis"
+      />
     </div>
   )
 }

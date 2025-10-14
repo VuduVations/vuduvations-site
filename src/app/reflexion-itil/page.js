@@ -1,6 +1,10 @@
+// src/app/reflexion-itil/page.js
+
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
+import ContactModal from '@/components/ContactModal';
 import { BarChart3, TrendingUp, AlertTriangle, CheckCircle, Clock, Target, DollarSign, Users, Activity, Shield, XCircle, ChevronDown, ChevronUp, FileText, Download, Copy } from 'lucide-react';
 import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
@@ -13,6 +17,26 @@ export default function ReflexionITILPage() {
   const [iterations, setIterations] = useState([]);
   const [progress, setProgress] = useState(0);
   const [expandedRFC, setExpandedRFC] = useState({});
+  const [showModal, setShowModal] = useState(false);
+
+  const reflexionBenefits = [
+    { 
+      text: "Self-improving RFC analysis with quantitative 10/10 quality scoring",
+      icon: <BarChart3 className="w-5 h-5" />
+    },
+    { 
+      text: "Multi-agent critique system that iteratively refines documentation",
+      icon: <TrendingUp className="w-5 h-5" />
+    },
+    { 
+      text: "Executive dashboards with CAB approval probability metrics",
+      icon: <Shield className="w-5 h-5" />
+    },
+    { 
+      text: "Continuous improvement automation for change management excellence",
+      icon: <Target className="w-5 h-5" />
+    }
+  ];
 
   const runReflexion = async () => {
     setIsProcessing(true);
@@ -251,9 +275,9 @@ ${iteration.iteration === 3 ? `
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <a href="/#apps" className="text-purple-300 hover:text-purple-100 mb-4 inline-block">
+          <Link href="/" className="text-purple-300 hover:text-purple-100 mb-4 inline-block">
             ← Back to Portfolio
-          </a>
+          </Link>
           <h1 className="text-4xl font-bold text-white mb-2">
             Reflexion ITIL Agent
           </h1>
@@ -665,16 +689,26 @@ ${iteration.iteration === 3 ? `
               <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
                 This demo shows what's possible. Get a tailored Reflexion ITIL analysis for your organization's change management process.
               </p>
-              <a
-                href="/#contact"
+              <button
+                onClick={() => setShowModal(true)}
                 className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white h-12 px-8 text-lg"
               >
-                View Services & Pricing
-              </a>
+                Request Custom Analysis
+              </button>
             </div>
           </div>
         )}
       </div>
+
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+        appName="Reflexion ITIL Agent"
+        appIcon={<Shield className="w-8 h-8" />}
+        benefits={reflexionBenefits}
+        ctaText="Request Custom ITIL Analysis"
+      />
     </div>
   );
 }

@@ -1,12 +1,17 @@
+// src/app/consulting-analyzer/page.js
+
 'use client'
 
 import { useState } from 'react'
-import { Briefcase, Brain, Zap, Shield, Clock, FileText, Download, Copy, AlertTriangle, TrendingUp, Target, Users, CheckCircle, DollarSign, BarChart3, Play, ChevronDown, ChevronUp } from 'lucide-react'
+import Link from 'next/link'
+import ContactModal from '@/components/ContactModal'
+import { Briefcase, Brain, Zap, Shield, Clock, FileText, Download, Copy, AlertTriangle, TrendingUp, Target, Users, CheckCircle, DollarSign, BarChart3, Play, ChevronDown, ChevronUp, Activity } from 'lucide-react'
 
 export default function ConsultingAnalyzer() {
   const [transcript, setTranscript] = useState('')
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   const [analysisResults, setAnalysisResults] = useState(null)
+  const [showModal, setShowModal] = useState(false)
   const [expandedSections, setExpandedSections] = useState({
     transcript: false,
     painPoints: true,
@@ -17,6 +22,25 @@ export default function ConsultingAnalyzer() {
 
   // API URL - will be replaced with environment variable in production
   const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://langgraph-analyzer-703153929469.us-central1.run.app'
+
+  const salesAnalyzerBenefits = [
+    { 
+      text: "Real-time LangGraph multi-tier intelligence on every sales conversation",
+      icon: <Zap className="w-5 h-5" />
+    },
+    { 
+      text: "Observable execution paths with cost tracking and conditional routing",
+      icon: <Activity className="w-5 h-5" />
+    },
+    { 
+      text: "Multi-tier routing across GPT-4 and Claude for optimal quality and cost",
+      icon: <DollarSign className="w-5 h-5" />
+    },
+    { 
+      text: "Actionable insights delivered within minutes of call completion",
+      icon: <Briefcase className="w-5 h-5" />
+    }
+  ]
 
   const sampleTranscripts = [
     {
@@ -252,6 +276,19 @@ END OF REPORT
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white p-6">
       <div className="max-w-7xl mx-auto">
         
+        {/* Back to Home Link */}
+        <div className="mb-6">
+          <Link 
+            href="/"
+            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Back to Portfolio
+          </Link>
+        </div>
+
         {/* Header */}
         <div className="mb-8 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
@@ -771,21 +808,30 @@ END OF REPORT
           </div>
         )}
 
-        {/* CTA Footer - Always Visible */}
+        {/* CTA Footer with Modal Trigger */}
         <div className="mt-12 bg-gradient-to-br from-blue-900/50 to-purple-900/50 rounded-xl p-8 border border-white/20 text-center">
           <h2 className="text-3xl font-bold mb-4">Want a Custom Analysis?</h2>
           <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
-            Get a comprehensive AI-powered sales call analysis tailored to your company&apos;s specific challenges and opportunities.
+            Get a comprehensive AI-powered sales call analysis tailored to your company's specific challenges and opportunities.
           </p>
-          <a 
-            href="/#services"
+          <button
+            onClick={() => setShowModal(true)}
             className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all text-lg"
           >
-            View Services & Pricing
-          </a>
+            Request Custom Analysis
+          </button>
         </div>
-
       </div>
+
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+        appName="Live Sales Call Analyzer"
+        appIcon={<Briefcase className="w-8 h-8" />}
+        benefits={salesAnalyzerBenefits}
+        ctaText="Request Custom Sales Analysis"
+      />
     </div>
   )
 }

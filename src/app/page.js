@@ -1,10 +1,13 @@
+// src/app/page.js
 'use client';
 
+import Navigation from '@/components/Navigation'
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Sparkles, ArrowRight, Github, Linkedin, Mail, ExternalLink, Menu } from "lucide-react";
 import { useState } from "react";
+import ContactRow from '@/components/ContactRow';
 
 export default function VuduvationsHome() {
   return (
@@ -17,82 +20,6 @@ export default function VuduvationsHome() {
       <ContactRow />
       <Footer />
     </div>
-  );
-}
-
-function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  return (
-    <nav className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="mx-auto max-w-7xl px-4">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 font-semibold text-lg">
-            <Sparkles className="h-5 w-5" />
-            <span>Vuduvations</span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
-            <Link href="#apps" className="text-sm font-medium hover:text-foreground/80 transition-colors">
-              Apps
-            </Link>
-            <Link href="#blog" className="text-sm font-medium hover:text-foreground/80 transition-colors">
-              Blog
-            </Link>
-            <Link href="#partners" className="text-sm font-medium hover:text-foreground/80 transition-colors">
-              Partners
-            </Link>
-            <Link href="#contact" className="text-sm font-medium hover:text-foreground/80 transition-colors">
-              Contact
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <Menu className="h-6 w-6" />
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-3 border-t">
-            <Link
-              href="#apps"
-              className="block text-sm font-medium hover:text-foreground/80 transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Apps
-            </Link>
-            <Link
-              href="#blog"
-              className="block text-sm font-medium hover:text-foreground/80 transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Blog
-            </Link>
-            <Link
-              href="#partners"
-              className="block text-sm font-medium hover:text-foreground/80 transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Partners
-            </Link>
-            <Link
-              href="#contact"
-              className="block text-sm font-medium hover:text-foreground/80 transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
-          </div>
-        )}
-      </div>
-    </nav>
   );
 }
 
@@ -133,7 +60,7 @@ function Hero() {
           Where Ideas Become <span className="bg-gradient-to-r from-foreground/90 to-foreground/60 bg-clip-text text-transparent">Vectors</span>
         </h1>
         <p className="mt-5 mx-auto max-w-2xl text-lg text-muted-foreground">
-          I build AI-powered applications that map, measure, and accelerate innovation. Explore the VuduSuite — a collective of tools that turns data into direction and direction into discovery.
+          Operating at the intersection of strategic advisory and hands-on execution—designing systems that solve real problems without the overhead of traditional consulting or the constraints of vendor lock-in.
         </p>
         <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
           <Link href="#apps" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8">
@@ -216,6 +143,13 @@ function ProjectHighlights() {
       href: "/consulting-analyzer",
       meta: "Active • v1.0",
       tags: ["LangGraph", "Multi-Tier", "Consulting"]
+    },
+    {
+      title: "Earnings Intelligence Platform",
+      blurb: "Strategy consulting-grade multi-quarter earnings analysis with sentiment tracking, strategic theme extraction, and investment implications. Institutional-level intelligence delivered in minutes.",
+      href: "/earnings-analyzer",
+      meta: "Active • v1.0",
+      tags: ["LangGraph", "Multi-Agent", "Financial AI"]
     },
   ];
 
@@ -312,32 +246,6 @@ function BlogTeasers() {
   );
 }
 
-function ContactRow() {
-  return (
-    <section id="contact" className="mx-auto max-w-7xl px-4 py-12">
-      <div className="rounded-2xl border p-6 md:p-8">
-        <div className="mb-4 text-center">
-          <h3 className="text-xl font-semibold">Let's Build Something Intelligent</h3>
-          <p className="mt-1 text-sm text-muted-foreground">Advisory, prototypes, or full-stack innovation apps — say hello.</p>
-        </div>
-        <div className="flex flex-wrap items-center justify-center gap-3">
-          <a href="mailto:botvoodoo@gmail.com" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
-            <Mail className="mr-2 h-4 w-4"/>
-            Email
-          </a>
-          <a href="https://github.com/VuduVations" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
-            <Github className="mr-2 h-4 w-4"/>
-            GitHub
-          </a>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
-            <Linkedin className="mr-2 h-4 w-4"/>
-            LinkedIn
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Footer() {
   return (
