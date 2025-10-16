@@ -997,8 +997,8 @@ ${iteration.iteration === 3 ? `
         {/* RFC Scenario Selection */}
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8 border border-white/20">
           <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold mb-2">Interactive Demo Scenarios</h2>
-            <p className="text-gray-300">
+            <h2 className="text-2xl font-bold mb-2 text-white">Interactive Demo Scenarios</h2>
+            <p className="text-gray-100">
               Select a realistic RFC scenario to see Reflexion pattern in action with full ITIL analysis
             </p>
           </div>
