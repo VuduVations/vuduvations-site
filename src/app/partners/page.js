@@ -1,7 +1,8 @@
 // src/app/partners/page.js
 'use client';
 
-import Navigation from '@/components/Navigation';
+import UniversalHeader from '@/components/UniversalHeader';
+import UnifiedFooter from '@/components/UnifiedFooter';
 import React, { useState } from "react";
 import { Sparkles, Cpu, Zap, Code, Cloud, Palette, Shield, Handshake, Target, Users, Briefcase } from "lucide-react";
 import ContactModal from '@/components/ContactModal';
@@ -12,25 +13,25 @@ export default function PartnershipsPage() {
   const partnershipBenefits = [
     { 
       text: "Access to cutting-edge AI implementation expertise without building an in-house team",
-      icon: <Sparkles className="w-5 h-5" />
+      icon: <Sparkles className="w-5 h-5 text-purple-400" />
     },
     { 
       text: "White-label AI solutions for consulting firms and system integrators",
-      icon: <Shield className="w-5 h-5" />
+      icon: <Shield className="w-5 h-5 text-cyan-400" />
     },
     { 
       text: "Rapid prototyping and MVP development for venture studios and accelerators",
-      icon: <Zap className="w-5 h-5" />
+      icon: <Zap className="w-5 h-5 text-yellow-400" />
     },
     { 
       text: "Strategic AI advisory for enterprises navigating digital transformation",
-      icon: <Target className="w-5 h-5" />
+      icon: <Target className="w-5 h-5 text-green-400" />
     }
   ];
 
   return (
     <div className="relative min-h-screen bg-background text-foreground">
-      <Navigation />
+      <UniversalHeader />
 
       <div className="mx-auto max-w-7xl px-4 py-16">
         
@@ -58,8 +59,8 @@ export default function PartnershipsPage() {
             {/* AI Models */}
             <div className="rounded-2xl border bg-card text-card-foreground shadow-sm p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-lg bg-primary/10">
-                  <Cpu className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-lg bg-blue-500/10">
+                  <Cpu className="h-6 w-6 text-blue-400" />
                 </div>
                 <h3 className="text-xl font-semibold">AI Models</h3>
               </div>
@@ -98,8 +99,8 @@ export default function PartnershipsPage() {
             {/* Frameworks */}
             <div className="rounded-2xl border bg-card text-card-foreground shadow-sm p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-lg bg-primary/10">
-                  <Code className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-lg bg-purple-500/10">
+                  <Code className="h-6 w-6 text-purple-400" />
                 </div>
                 <h3 className="text-xl font-semibold">Frameworks</h3>
               </div>
@@ -138,8 +139,8 @@ export default function PartnershipsPage() {
             {/* Vector & Embeddings */}
             <div className="rounded-2xl border bg-card text-card-foreground shadow-sm p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-lg bg-primary/10">
-                  <Palette className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-lg bg-pink-500/10">
+                  <Palette className="h-6 w-6 text-pink-400" />
                 </div>
                 <h3 className="text-xl font-semibold">Vector & Embeddings</h3>
               </div>
@@ -171,8 +172,8 @@ export default function PartnershipsPage() {
             {/* Infrastructure */}
             <div className="rounded-2xl border bg-card text-card-foreground shadow-sm p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-lg bg-primary/10">
-                  <Cloud className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-lg bg-cyan-500/10">
+                  <Cloud className="h-6 w-6 text-cyan-400" />
                 </div>
                 <h3 className="text-xl font-semibold">Infrastructure</h3>
               </div>
@@ -230,7 +231,7 @@ export default function PartnershipsPage() {
             {/* Consulting Firms */}
             <div className="rounded-2xl border bg-card text-card-foreground shadow-sm p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-3 mb-4">
-                <Briefcase className="h-8 w-8 text-primary" />
+                <Briefcase className="h-8 w-8 text-orange-400" />
                 <h3 className="text-2xl font-semibold">Consulting Firms</h3>
               </div>
               <p className="text-muted-foreground mb-4">
@@ -255,7 +256,7 @@ export default function PartnershipsPage() {
             {/* System Integrators */}
             <div className="rounded-2xl border bg-card text-card-foreground shadow-sm p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-3 mb-4">
-                <Zap className="h-8 w-8 text-primary" />
+                <Zap className="h-8 w-8 text-yellow-400" />
                 <h3 className="text-2xl font-semibold">System Integrators</h3>
               </div>
               <p className="text-muted-foreground mb-4">
@@ -280,7 +281,7 @@ export default function PartnershipsPage() {
             {/* Venture Studios */}
             <div className="rounded-2xl border bg-card text-card-foreground shadow-sm p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-3 mb-4">
-                <Target className="h-8 w-8 text-primary" />
+                <Target className="h-8 w-8 text-green-400" />
                 <h3 className="text-2xl font-semibold">Venture Studios</h3>
               </div>
               <p className="text-muted-foreground mb-4">
@@ -305,7 +306,7 @@ export default function PartnershipsPage() {
             {/* Enterprises */}
             <div className="rounded-2xl border bg-card text-card-foreground shadow-sm p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-3 mb-4">
-                <Users className="h-8 w-8 text-primary" />
+                <Users className="h-8 w-8 text-blue-400" />
                 <h3 className="text-2xl font-semibold">Enterprise Teams</h3>
               </div>
               <p className="text-muted-foreground mb-4">
@@ -331,7 +332,7 @@ export default function PartnershipsPage() {
 
         {/* CTA Section */}
         <section className="rounded-2xl border bg-gradient-to-r from-primary/10 to-primary/5 p-8 md:p-12 text-center">
-          <Handshake className="h-12 w-12 mx-auto mb-4 text-primary" />
+          <Handshake className="h-12 w-12 mx-auto mb-4 text-purple-400" />
           <h2 className="text-3xl font-bold mb-4">Let's Explore a Partnership</h2>
           <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
             Whether you're looking to extend your service offerings, accelerate a portfolio company, 
@@ -352,10 +353,13 @@ export default function PartnershipsPage() {
         isOpen={showModal}
         onClose={() => setShowModal(false)}
         appName="Partnership Inquiry"
-        appIcon={<Handshake className="w-8 h-8" />}
+        appIcon={<Handshake className="w-8 h-8 text-purple-400" />}
         benefits={partnershipBenefits}
         ctaText="Send Partnership Inquiry"
       />
+
+      {/* Footer */}
+      <UnifiedFooter />
     </div>
   );
 }

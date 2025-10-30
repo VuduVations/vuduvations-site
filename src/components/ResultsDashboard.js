@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   TrendingUp, DollarSign, BarChart3, Clock, FileText, 
   Target, Download, Copy, RefreshCw, Menu, ChevronUp
@@ -12,13 +12,13 @@ import RoadmapSection from '@/components/RoadmapSection';
 import NextStepsSection from '@/components/NextStepsSection';
 
 // Dashboard components
-import MetricsOverview from '@/components/dashboard/MetricsOverview';
-import ROIComparisonChart from '@/components/dashboard/ROIComparisonChart';
-import StrategicMatrix from '@/components/dashboard/StrategicMatrix';
-import TimelineGantt from '@/components/dashboard/TimelineGantt';
-import FinancialProjections from '@/components/dashboard/FinancialProjections';
-import RiskHeatmap from '@/components/dashboard/RiskHeatmap';
-import VendorLandscape from '@/components/dashboard/VendorLandscape';
+import MetricsOverview from '@/components/MetricsOverview';
+import ROIComparisonChart from '@/components/ROIComparisonChart';
+import StrategicMatrix from '@/components/StrategicMatrix';
+import TimelineGantt from '@/components/TimelineGantt';
+import FinancialProjections from '@/components/FinancialProjections';
+import RiskHeatmap from '@/components/RiskHeatmap';
+import VendorLandscape from '@/components/VendorLandscape';
 import DepartmentImpact from '@/components/DepartmentImpact';
 
 // Utils
@@ -30,7 +30,7 @@ const ResultsDashboard = ({ analysisResults, formData, onReset, showToast }) => 
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [showNav, setShowNav] = useState(false);
 
-  // ✅ FIXED DEBUG LOGS - Using correct prop names
+  // Debug logs
   console.log('=== RESULTS DASHBOARD DEBUG ===');
   console.log('📦 Full analysisResults:', analysisResults);
   console.log('🎯 top_use_cases:', analysisResults?.top_use_cases);
@@ -73,7 +73,7 @@ const ResultsDashboard = ({ analysisResults, formData, onReset, showToast }) => 
   };
 
   // Handle scroll for "back to top" button
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 500);
     };
@@ -139,49 +139,51 @@ const ResultsDashboard = ({ analysisResults, formData, onReset, showToast }) => 
         </button>
       )}
 
-      {/* Header Section */}
-      <div id="header" className="space-y-6 mb-8">
-        {/* Header with Actions */}
-        <div className="flex items-center justify-between flex-wrap gap-4 bg-gradient-to-r from-slate-900 to-slate-800 border-2 border-teal-500 rounded-2xl p-6 shadow-2xl">
-          <div>
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
-              AI Discovery Results
-            </h2>
-            <p className="text-xl text-gray-300 mt-2">{formData.company_name}</p>
-            <p className="text-sm text-gray-400">{formData.industry}</p>
-          </div>
-          
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => exportToPDFText(analysisResults, formData, showToast, setIsExportingPDF)}
-              disabled={isExportingPDF}
-              className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-6 py-3 rounded-xl transition-all disabled:opacity-50 shadow-lg hover:shadow-purple-500/50"
-            >
-              <Download className="w-5 h-5" />
-              <span className="font-semibold">{isExportingPDF ? 'Generating...' : 'Export PDF'}</span>
-            </button>
+      {/* Header Section - Hidden when called from detail page */}
+      {onReset && (
+        <div id="header" className="space-y-6 mb-8">
+          {/* Header with Actions */}
+          <div className="flex items-center justify-between flex-wrap gap-4 bg-gradient-to-r from-slate-900 to-slate-800 border-2 border-teal-500 rounded-2xl p-6 shadow-2xl">
+            <div>
+              <h2 className="text-4xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
+                AI Discovery Results
+              </h2>
+              <p className="text-xl text-gray-300 mt-2">{formData.company_name}</p>
+              <p className="text-sm text-gray-400">{formData.industry}</p>
+            </div>
             
-            <button
-              onClick={() => copyToClipboard(JSON.stringify(analysisResults, null, 2), showToast)}
-              className="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-xl transition-all shadow-lg"
-            >
-              <Copy className="w-5 h-5" />
-              <span className="font-semibold">Copy JSON</span>
-            </button>
-            
-            <button
-              onClick={onReset}
-              className="flex items-center gap-2 bg-teal-600 hover:bg-teal-700 px-6 py-3 rounded-xl transition-all shadow-lg hover:shadow-teal-500/50"
-            >
-              <RefreshCw className="w-5 h-5" />
-              <span className="font-semibold">New Analysis</span>
-            </button>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => exportToPDFText(analysisResults, formData, showToast, setIsExportingPDF)}
+                disabled={isExportingPDF}
+                className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-6 py-3 rounded-xl transition-all disabled:opacity-50 shadow-lg hover:shadow-purple-500/50"
+              >
+                <Download className="w-5 h-5" />
+                <span className="font-semibold">{isExportingPDF ? 'Generating...' : 'Export PDF'}</span>
+              </button>
+              
+              <button
+                onClick={() => copyToClipboard(JSON.stringify(analysisResults, null, 2), showToast)}
+                className="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-xl transition-all shadow-lg"
+              >
+                <Copy className="w-5 h-5" />
+                <span className="font-semibold">Copy JSON</span>
+              </button>
+              
+              <button
+                onClick={onReset}
+                className="flex items-center gap-2 bg-teal-600 hover:bg-teal-700 px-6 py-3 rounded-xl transition-all shadow-lg hover:shadow-teal-500/50"
+              >
+                <RefreshCw className="w-5 h-5" />
+                <span className="font-semibold">New Analysis</span>
+              </button>
+            </div>
           </div>
-        </div>
 
-        {/* Section Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-teal-500 to-transparent"></div>
-      </div>
+          {/* Section Divider */}
+          <div className="h-px bg-gradient-to-r from-transparent via-teal-500 to-transparent"></div>
+        </div>
+      )}
 
       {/* 1. Metrics Overview Section */}
       <section id="metrics" className="mb-12 scroll-mt-24">
@@ -198,12 +200,12 @@ const ResultsDashboard = ({ analysisResults, formData, onReset, showToast }) => 
           <div className="w-1 h-8 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></div>
           <h3 className="text-3xl font-bold text-white">Executive Summary</h3>
         </div>
-        <div className="bg-gradient-to-r from-teal-900 to-cyan-900 bg-opacity-30 border-2 border-teal-500 rounded-2xl p-8 shadow-2xl">
+        <div className="bg-gradient-to-r from-teal-900/20 to-cyan-900/20 border-2 border-teal-500 rounded-2xl p-8 shadow-2xl">
           <div className="flex items-center gap-3 mb-6">
             <FileText className="w-8 h-8 text-teal-400" />
-            <h4 className="text-2xl font-bold">Strategic Overview</h4>
+            <h4 className="text-2xl font-bold text-white">Strategic Overview</h4>
           </div>
-          <div className="bg-black bg-opacity-60 rounded-xl p-6">
+          <div className="bg-black/20 rounded-xl p-6 border border-slate-700">
             <div className="whitespace-pre-wrap text-base leading-relaxed text-gray-300">
               {analysisResults.executive_summary}
             </div>

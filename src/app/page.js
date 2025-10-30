@@ -1,24 +1,25 @@
 // src/app/page.js
 'use client';
 
-import Navigation from '@/components/Navigation'
+import UniversalHeader from '../components/UniversalHeader';
+import UnifiedFooter from '../components/UnifiedFooter';
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Sparkles, ArrowRight, Github, Linkedin, Mail, ExternalLink, Menu } from "lucide-react";
+import { Sparkles, ArrowRight, Github, Linkedin, Mail, ExternalLink, Menu, Zap, FlaskConical } from "lucide-react";
 import { useState } from "react";
-import ContactRow from '@/components/ContactRow';
+import ContactRow from '../components/ContactRow';
 
-export default function VuduvationsHome() {
+export default function VuduVationsHome() {
   return (
     <div className="relative min-h-screen bg-background text-foreground">
-      <Navigation />
+      <UniversalHeader />
       <Hero />
+      <ProductionStatusBanner />
       <Philosophy />
       <ProjectHighlights />
-      <BlogTeasers />
       <ContactRow />
-      <Footer />
+      <UnifiedFooter />
     </div>
   );
 }
@@ -54,7 +55,7 @@ function Hero() {
 
       <div className="mx-auto max-w-7xl px-4 py-24 md:py-32 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm text-muted-foreground">
-          <Sparkles className="h-4 w-4" /> Vuduvations — Independent Innovation Studio
+          <Sparkles className="h-4 w-4" /> VuduVations — Independent Innovation Studio
         </div>
         <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-6xl">
           Where Ideas Become <span className="bg-gradient-to-r from-foreground/90 to-foreground/60 bg-clip-text text-transparent">Vectors</span>
@@ -65,13 +66,64 @@ function Hero() {
         <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
           <Link href="#apps" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8">
             Explore the Apps
-            <ArrowRight className="ml-2 h-4 w-4" />
+            
           </Link>
-          <Link href="/partners" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8">
-            Partner with Me
+          <Link href="/partners" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8">
+            Partners
+
           </Link>
         </div>
       </div>
+    </section>
+  );
+}
+
+function ProductionStatusBanner() {
+  return (
+    <section className="mx-auto max-w-7xl px-4 py-8">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="rounded-xl border border-blue-500/20 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 p-6 backdrop-blur-sm"
+      >
+        <div className="flex items-start gap-4">
+          <div className="rounded-lg bg-blue-500/20 p-2 mt-1">
+            <Zap className="h-5 w-5 text-blue-400" />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold text-blue-400 mb-2 flex items-center gap-2">
+              Production-Ready Architecture, Demo Mode Operation
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+              All VuduVations tools are built with <strong className="text-foreground">production-grade AI backends</strong> — 
+              3 LangGraph multi-agent systems and 1 CrewAI orchestration. During our audience-building phase (Phase 1), 
+              most tools display <strong className="text-foreground">high-fidelity simulated results</strong> to manage API costs 
+              while we gather feedback and build critical mass.
+            </p>
+            <div className="flex flex-wrap items-center gap-4 text-xs">
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-green-400"></div>
+                <span className="text-muted-foreground">
+                  <strong className="text-green-400">Live Sales Call Analyzer</strong> — Full backend connectivity
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-blue-400"></div>
+                <span className="text-muted-foreground">
+                  <strong className="text-blue-400">Other Tools</strong> — Production-ready backends in demo mode
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-purple-400"></div>
+                <span className="text-muted-foreground">
+                  <strong className="text-purple-400">Phase 2</strong> — Full activation with monetization
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }
@@ -125,31 +177,39 @@ function ProjectHighlights() {
   const projects = [
     {
       title: "AI Discovery Dashboard",
-      blurb: "Interactive AI strategy analysis for enterprises. Multi-dimensional assessment of AI opportunities with executive dashboards, use case mapping, and ROI projections.",
+      blurb: "Interactive AI strategy analysis for enterprises. Production-ready CrewAI multi-agent system with multi-dimensional assessment, executive dashboards, use case mapping, and ROI projections.",
       href: "/ai-discovery",
       meta: "Active • v2.0",
-      tags: ["CrewAI", "Multi-Agent", "Strategy"]
+      status: "demo",
+      tags: ["CrewAI", "Multi-Agent", "Strategy"],
+      backend: "Production-Ready"
     },
     {
       title: "Reflexion ITIL Agent",
-      blurb: "Self-improving AI for ITIL Change Management. Uses the Reflexion pattern to iteratively refine RFC documents through multi-agent critique and quality scoring.",
+      blurb: "Self-improving AI for ITIL Change Management. Powered by Llama 3.2 3B using the Reflexion pattern to iteratively analyze, critique, and refine RFC documents through automated quality scoring.",
       href: "/reflexion-itil",
       meta: "Active • v3.0",
-      tags: ["LangGraph", "Reflexion", "ITIL"]
+      status: "demo",
+      tags: ["Llama 3.2 3B", "Reflexion", "ITIL"],
+      backend: "Production-Ready"
     },
     {
       title: "Live Sales Call Analyzer",
-      blurb: "Real-time LangGraph multi-tier intelligence for sales transcript analysis. Observable execution path with cost tracking and conditional routing across GPT-4 and Claude tiers.",
+      blurb: "Real-time LangGraph multi-tier intelligence for sales transcript analysis. Observable execution path with cost tracking and conditional routing across GPT-4 and Claude tiers. Fully connected backend demonstrating production architecture.",
       href: "/consulting-analyzer",
       meta: "Active • v1.0",
-      tags: ["LangGraph", "Multi-Tier", "Consulting"]
+      status: "live",
+      tags: ["LangGraph", "Multi-Tier", "Consulting"],
+      backend: "Live Backend"
     },
     {
       title: "Earnings Intelligence Platform",
-      blurb: "Strategy consulting-grade multi-quarter earnings analysis with sentiment tracking, strategic theme extraction, and investment implications. Institutional-level intelligence delivered in minutes.",
+      blurb: "Bloomberg-inspired intelligence at zero API cost. Powered by Llama 3.1 8B for professional multi-quarter analysis with sentiment tracking, strategic insights, and transparent scoring—all processing locally.",
       href: "/earnings-analyzer",
       meta: "Active • v1.0",
-      tags: ["LangGraph", "Multi-Agent", "Financial AI"]
+      status: "demo",
+      tags: ["Llama 3.1 8B", "Whisper Medium", "Zero API Costs", "Private", "Sentiment Analysis", "Theme Extraction", "Local LLM" ],
+      backend: "Production-Ready"
     },
   ];
 
@@ -158,15 +218,38 @@ function ProjectHighlights() {
       <div className="mb-6 flex items-center justify-between">
         <h2 className="text-2xl font-semibold tracking-tight">VuduSuite Applications</h2>
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
         {projects.map((p, i) => (
-          <div key={i} className="rounded-2xl border bg-card text-card-foreground shadow-sm hover:shadow-lg transition-shadow">
+          <motion.div 
+            key={i} 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: i * 0.1 }}
+            className="rounded-2xl border bg-card text-card-foreground shadow-sm hover:shadow-lg transition-shadow"
+          >
             <div className="p-6 space-y-1.5">
               <div className="flex items-center justify-between">
                 <h3 className="text-xl font-semibold leading-none tracking-tight">{p.title}</h3>
-                <span className="text-xs font-medium text-muted-foreground">{p.meta}</span>
+                <div className="flex items-center gap-2">
+                  {p.status === "live" ? (
+                    <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-green-500/10 text-green-500 text-xs font-semibold border border-green-500/20">
+                      <Zap className="h-3 w-3" />
+                      Live
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold border border-blue-500/20">
+                      <FlaskConical className="h-3 w-3" />
+                      Demo
+                    </span>
+                  )}
+                </div>
               </div>
-              <p className="text-sm text-muted-foreground">{p.blurb}</p>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-medium text-muted-foreground">{p.meta}</span>
+                <span className="text-xs text-muted-foreground">•</span>
+                <span className="text-xs font-medium text-purple-400">{p.backend}</span>
+              </div>
+              <p className="text-sm text-muted-foreground pt-2">{p.blurb}</p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {p.tags.map((tag, idx) => (
                   <span key={idx} className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
@@ -187,76 +270,9 @@ function ProjectHighlights() {
                 </Link>
               )}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
-  );
-}
-
-function BlogTeasers() {
-  const posts = [
-    {
-      title: "Building in Public: The VuduSuite",
-      excerpt: "Reflections on building AI applications as a solo founder. Lessons from consulting, design decisions, and the discipline of shipping.",
-      href: "#",
-      meta: "Coming Soon • Insight"
-    },
-    {
-      title: "Vector Thinking: Ideas as Embeddings",
-      excerpt: "How semantic space reveals innovation opportunities. A framework for measuring the distance between what is and what could be.",
-      href: "#",
-      meta: "Coming Soon • Framework"
-    },
-    {
-      title: "Lab Notes: Reflexion Pattern",
-      excerpt: "Behind-the-scenes on building self-improving AI agents. Implementation details, challenges, and insights from the ITIL demo.",
-      href: "#",
-      meta: "Coming Soon • Technical"
-    },
-  ];
-
-  return (
-    <section id="blog" className="mx-auto max-w-7xl px-4 py-10">
-      <div className="mb-6 flex items-center justify-between">
-        <h2 className="text-2xl font-semibold tracking-tight">From the Lab</h2>
-      </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {posts.map((p, i) => (
-          <div key={i} className="rounded-2xl border bg-card text-card-foreground shadow-sm">
-            <div className="p-6 space-y-1.5">
-              <h3 className="text-lg font-semibold leading-none tracking-tight">{p.title}</h3>
-              <p className="text-xs text-muted-foreground">{p.meta}</p>
-            </div>
-            <div className="p-6 pt-0">
-              <p className="mb-4 text-sm text-muted-foreground">{p.excerpt}</p>
-              {p.href !== "#" ? (
-                <Link href={p.href} className="inline-flex items-center text-sm font-medium hover:underline">
-                  Read more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              ) : (
-                <span className="text-sm text-muted-foreground">Coming soon</span>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-
-function Footer() {
-  return (
-    <footer className="border-t">
-      <div className="mx-auto max-w-7xl px-4 py-8">
-        <div className="flex flex-col items-center gap-3 text-center">
-          <div className="w-full border-t my-2"></div>
-          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Vuduvations. Built by a one-person studio.</p>
-          <p className="text-[11px] text-muted-foreground">Born of Vudu</p>
-        </div>
-      </div>
-    </footer>
   );
 }

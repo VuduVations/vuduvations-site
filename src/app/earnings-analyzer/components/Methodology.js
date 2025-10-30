@@ -129,15 +129,15 @@ export default function Methodology() {
               </h4>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-0.5">•</span>
+                  <span className="text-blue-400 mt-0.5">â€¢</span>
                   <span>Transcript normalization & quality validation</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-0.5">•</span>
+                  <span className="text-blue-400 mt-0.5">â€¢</span>
                   <span>Real-time market data integration (stock prices, volume)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-0.5">•</span>
+                  <span className="text-blue-400 mt-0.5">â€¢</span>
                   <span>Multi-quarter historical tracking & comparison</span>
                 </li>
               </ul>
@@ -151,15 +151,15 @@ export default function Methodology() {
               </h4>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-start gap-2">
-                  <span className="text-purple-400 mt-0.5">•</span>
+                  <span className="text-purple-400 mt-0.5">â€¢</span>
                   <span>Calibrated 0-1 scale validated against market reactions</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-purple-400 mt-0.5">•</span>
+                  <span className="text-purple-400 mt-0.5">â€¢</span>
                   <span>Nuanced tone detection (e.g., &quot;cautiously optimistic&quot;)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-purple-400 mt-0.5">•</span>
+                  <span className="text-purple-400 mt-0.5">â€¢</span>
                   <span>Cross-validation with actual stock price movements</span>
                 </li>
               </ul>
@@ -173,19 +173,19 @@ export default function Methodology() {
               </h4>
               <ul className="space-y-2 text-sm text-gray-300">
                 <li className="flex items-start gap-2">
-                  <span className="text-green-400 mt-0.5">•</span>
+                  <span className="text-green-400 mt-0.5">â€¢</span>
                   <span>Business segment performance with financial evidence</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-400 mt-0.5">•</span>
+                  <span className="text-green-400 mt-0.5">â€¢</span>
                   <span>Strategic themes, initiatives & management priorities</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-400 mt-0.5">•</span>
+                  <span className="text-green-400 mt-0.5">â€¢</span>
                   <span>Risk factors, opportunities & forward guidance</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-400 mt-0.5">•</span>
+                  <span className="text-green-400 mt-0.5">â€¢</span>
                   <span>Quarter-over-quarter change detection & analysis</span>
                 </li>
               </ul>

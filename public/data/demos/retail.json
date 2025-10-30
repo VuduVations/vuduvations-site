@@ -1,485 +1,119 @@
 {
-  "status": "success",
   "company_name": "TechRetail Inc.",
   "industry": "E-commerce Retail",
-  "analysis_date": "2025-10-10",
-  "executive_summary": "AI transformation analysis completed for TechRetail Inc..",
-  "top_use_cases": [
+  "revenue": "$50M annual revenue",
+  "executive_summary": {
+    "summary": "Comprehensive AI discovery analysis for TechRetail Inc. identifying 7 strategic use cases across customer experience, inventory management, and revenue optimization. Total potential annual savings of $8.5M with an average ROI of 95%.",
+    "total_use_cases": 7,
+    "average_roi": 95,
+    "total_investment": 2800000,
+    "total_annual_savings": 8500000
+  },
+  "use_cases": [
     {
-      "title": "AI-Powered Customer Support Chatbot",
+      "title": "AI-Powered Customer Service Chatbot",
+      "description": "Intelligent chatbot that handles routine customer inquiries 24/7, reducing support costs while improving response times and customer satisfaction.",
+      "priority": "high",
+      "estimated_cost": 350000,
+      "estimated_savings": 1800000,
+      "estimated_roi": 414,
+      "implementation_time": "3-4 months",
       "department": "Customer Service",
-      "description": "Automates customer queries, reducing human intervention and operational costs.",
-      "estimated_cost": 500000,
-      "estimated_roi": 140,
-      "estimated_savings": 1200000,
-      "cost": 500000,
-      "roi": 140,
-      "savings": 1200000,
-      "implementation_time": "5 months",
       "key_benefits": [
-        "Annual savings: $1,200,000",
-        "ROI: 140%",
-        "Payback period: 5 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "High",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "AI-Powered Customer Support Chatbot",
-        "description": "Automates customer queries, reducing human intervention and operational costs.",
-        "department": "Customer Service",
-        "priority": "High",
-        "estimated_roi": 140,
-        "implementation_time": "5 months",
-        "estimated_cost": 500000,
-        "estimated_savings": 1200000,
-        "key_benefits": [
-          "Annual savings: $1,200,000",
-          "ROI: 140%",
-          "Payback period: 5 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
+        "70% reduction in tier-1 support tickets",
+        "24/7 instant customer support",
+        "40% improvement in customer satisfaction scores"
+      ]
     },
     {
-      "title": "Predictive Inventory Management",
-      "department": "Inventory Management",
-      "description": "Optimizes stock levels using advanced forecasting models to decrease excess stock and stockouts, boosting efficiency.",
-      "estimated_cost": 750000,
-      "estimated_roi": 167,
-      "estimated_savings": 2000000,
-      "cost": 750000,
-      "roi": 167,
-      "savings": 2000000,
-      "implementation_time": "4.5 months",
+      "title": "Personalized Product Recommendations",
+      "description": "ML-based recommendation engine that analyzes browsing and purchase history to deliver personalized product suggestions, increasing conversion rates.",
+      "priority": "high",
+      "estimated_cost": 450000,
+      "estimated_savings": 2200000,
+      "estimated_roi": 389,
+      "implementation_time": "4-6 months",
+      "department": "E-commerce",
       "key_benefits": [
-        "Annual savings: $2,000,000",
-        "ROI: 167%",
-        "Payback period: 4 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "High",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Predictive Inventory Management",
-        "description": "Optimizes stock levels using advanced forecasting models to decrease excess stock and stockouts, boosting efficiency.",
-        "department": "Inventory Management",
-        "priority": "High",
-        "estimated_roi": 167,
-        "implementation_time": "4.5 months",
-        "estimated_cost": 750000,
-        "estimated_savings": 2000000,
-        "key_benefits": [
-          "Annual savings: $2,000,000",
-          "ROI: 167%",
-          "Payback period: 4 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
-    },
-    {
-      "title": "Automated Order Processing",
-      "department": "Operations",
-      "description": "Enhances accuracy and speed in order fulfillment by automating manual order processing tasks.",
-      "estimated_cost": 600000,
-      "estimated_roi": 150,
-      "estimated_savings": 1500000,
-      "cost": 600000,
-      "roi": 150,
-      "savings": 1500000,
-      "implementation_time": "5 months",
-      "key_benefits": [
-        "Annual savings: $1,500,000",
-        "ROI: 150%",
-        "Payback period: 4 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "Medium",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Automated Order Processing",
-        "description": "Enhances accuracy and speed in order fulfillment by automating manual order processing tasks.",
-        "department": "Operations",
-        "priority": "Medium",
-        "estimated_roi": 150,
-        "implementation_time": "5 months",
-        "estimated_cost": 600000,
-        "estimated_savings": 1500000,
-        "key_benefits": [
-          "Annual savings: $1,500,000",
-          "ROI: 150%",
-          "Payback period: 4 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
-    },
-    {
-      "title": "Personalized Marketing Recommendations",
-      "department": "Marketing",
-      "description": "Increases purchase likelihood through targeted marketing by providing personalized product recommendations.",
-      "estimated_cost": 400000,
-      "estimated_roi": 175,
-      "estimated_savings": 1000000,
-      "cost": 400000,
-      "roi": 175,
-      "savings": 1000000,
-      "implementation_time": "4 months",
-      "key_benefits": [
-        "Annual savings: $1,000,000",
-        "ROI: 175%",
-        "Payback period: 4 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "High",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Personalized Marketing Recommendations",
-        "description": "Increases purchase likelihood through targeted marketing by providing personalized product recommendations.",
-        "department": "Marketing",
-        "priority": "High",
-        "estimated_roi": 175,
-        "implementation_time": "4 months",
-        "estimated_cost": 400000,
-        "estimated_savings": 1000000,
-        "key_benefits": [
-          "Annual savings: $1,000,000",
-          "ROI: 175%",
-          "Payback period: 4 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
+        "35% increase in average order value",
+        "25% higher conversion rates",
+        "Improved customer lifetime value"
+      ]
     },
     {
       "title": "Dynamic Pricing Optimization",
-      "department": "Pricing",
-      "description": "Adjusts prices in real-time to maximize revenue dynamically based on market conditions and customer demand.",
-      "estimated_cost": 850000,
-      "estimated_roi": 194,
-      "estimated_savings": 2500000,
-      "cost": 850000,
-      "roi": 194,
-      "savings": 2500000,
-      "implementation_time": "4 months",
+      "description": "AI system that automatically adjusts prices based on demand, competition, inventory levels, and customer segments to maximize revenue.",
+      "priority": "high",
+      "estimated_cost": 400000,
+      "estimated_savings": 1900000,
+      "estimated_roi": 375,
+      "implementation_time": "5-7 months",
+      "department": "Revenue Management",
       "key_benefits": [
-        "Annual savings: $2,500,000",
-        "ROI: 194%",
-        "Payback period: 4 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "High",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Dynamic Pricing Optimization",
-        "description": "Adjusts prices in real-time to maximize revenue dynamically based on market conditions and customer demand.",
-        "department": "Pricing",
-        "priority": "High",
-        "estimated_roi": 194,
-        "implementation_time": "4 months",
-        "estimated_cost": 850000,
-        "estimated_savings": 2500000,
-        "key_benefits": [
-          "Annual savings: $2,500,000",
-          "ROI: 194%",
-          "Payback period: 4 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
+        "18% revenue increase through optimized pricing",
+        "Improved margin management",
+        "Competitive price monitoring"
+      ]
     },
     {
-      "title": "Sentiment Analysis for Customer Feedback",
-      "department": "Customer Service",
-      "description": "Provides insights to improve customer satisfaction by analyzing customer feedback and sentiment.",
-      "estimated_cost": 300000,
-      "estimated_roi": 167,
-      "estimated_savings": 800000,
-      "cost": 300000,
-      "roi": 167,
-      "savings": 800000,
-      "implementation_time": "4 months",
+      "title": "Intelligent Inventory Management",
+      "description": "Predictive inventory system that optimizes stock levels across warehouses and stores based on demand forecasting and seasonal trends.",
+      "priority": "medium",
+      "estimated_cost": 500000,
+      "estimated_savings": 1400000,
+      "estimated_roi": 180,
+      "implementation_time": "6-8 months",
+      "department": "Supply Chain",
       "key_benefits": [
-        "Annual savings: $800,000",
-        "ROI: 167%",
-        "Payback period: 4 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "Medium",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Sentiment Analysis for Customer Feedback",
-        "description": "Provides insights to improve customer satisfaction by analyzing customer feedback and sentiment.",
-        "department": "Customer Service",
-        "priority": "Medium",
-        "estimated_roi": 167,
-        "implementation_time": "4 months",
-        "estimated_cost": 300000,
-        "estimated_savings": 800000,
-        "key_benefits": [
-          "Annual savings: $800,000",
-          "ROI: 167%",
-          "Payback period: 4 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
+        "30% reduction in excess inventory",
+        "50% decrease in stockouts",
+        "Lower storage and handling costs"
+      ]
     },
     {
-      "title": "AI-Driven Demand Forecasting",
-      "department": "Sales",
-      "description": "Improves accuracy in demand prediction, enabling better planning and inventory management.",
-      "estimated_cost": 900000,
-      "estimated_roi": 144,
-      "estimated_savings": 2200000,
-      "cost": 900000,
-      "roi": 144,
-      "savings": 2200000,
-      "implementation_time": "5 months",
+      "title": "Cart Abandonment Recovery",
+      "description": "AI-driven system that identifies at-risk customers and deploys personalized recovery tactics including dynamic discounts and targeted messaging.",
+      "priority": "medium",
+      "estimated_cost": 280000,
+      "estimated_savings": 920000,
+      "estimated_roi": 229,
+      "implementation_time": "3-4 months",
+      "department": "E-commerce",
       "key_benefits": [
-        "Annual savings: $2,200,000",
-        "ROI: 144%",
-        "Payback period: 4 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "High",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "AI-Driven Demand Forecasting",
-        "description": "Improves accuracy in demand prediction, enabling better planning and inventory management.",
-        "department": "Sales",
-        "priority": "High",
-        "estimated_roi": 144,
-        "implementation_time": "5 months",
-        "estimated_cost": 900000,
-        "estimated_savings": 2200000,
-        "key_benefits": [
-          "Annual savings: $2,200,000",
-          "ROI: 144%",
-          "Payback period: 4 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
+        "40% recovery rate on abandoned carts",
+        "Personalized discount optimization",
+        "Reduced marketing spend waste"
+      ]
+    },
+    {
+      "title": "Visual Search and Discovery",
+      "description": "Computer vision-powered search that allows customers to find products by uploading images, improving product discovery and conversion.",
+      "priority": "medium",
+      "estimated_cost": 380000,
+      "estimated_savings": 850000,
+      "estimated_roi": 124,
+      "implementation_time": "5-6 months",
+      "department": "E-commerce",
+      "key_benefits": [
+        "Enhanced product discovery experience",
+        "20% increase in search-to-purchase conversion",
+        "Differentiated customer experience"
+      ]
+    },
+    {
+      "title": "Fraud Detection System",
+      "description": "ML-based fraud detection that analyzes transaction patterns in real-time to prevent fraudulent purchases and chargebacks.",
+      "priority": "low",
+      "estimated_cost": 440000,
+      "estimated_savings": 1430000,
+      "estimated_roi": 225,
+      "implementation_time": "4-5 months",
+      "department": "Risk Management",
+      "key_benefits": [
+        "85% reduction in fraudulent transactions",
+        "Lower chargeback rates",
+        "Improved customer trust and security"
+      ]
     }
-  ],
-  "financial_summary": {
-    "total_investment": 4300000,
-    "expected_annual_savings": 11200000,
-    "roi_percentage": 162.42857142857142,
-    "payback_period_months": 4,
-    "npv": 23552742.29902329,
-    "irr": 162.42857142857142
-  },
-  "implementation_roadmap": [
-    {
-      "phase": "Phase 1",
-      "duration": "0-12 Months",
-      "use_cases": [
-        "Personalized Marketing Recommendations"
-      ],
-      "key_milestones": [
-        "Initial setup and integration",
-        "Pilot testing",
-        "Full deployment"
-      ],
-      "estimated_cost": 400000
-    },
-    {
-      "phase": "Phase 2",
-      "duration": "12-24 Months",
-      "use_cases": [
-        "Sentiment Analysis for Customer Feedback"
-      ],
-      "key_milestones": [
-        "Setup and integration",
-        "Testing and validation",
-        "Deployment"
-      ],
-      "estimated_cost": 300000
-    },
-    {
-      "phase": "Phase 3",
-      "duration": "24-36 Months",
-      "use_cases": [
-        "Review Deferred Initiatives"
-      ],
-      "key_milestones": [
-        "Evaluation of outcomes",
-        "Adjustment and scaling",
-        "Final review"
-      ],
-      "estimated_cost": 0
-    }
-  ],
-  "strategic_recommendations": [
-    "Prioritize high-ROI projects like Personalized Marketing Recommendations and Dynamic Pricing Optimization.",
-    "Focus on seamless integration with existing systems for minimal disruption.",
-    "Implement strong data governance and compliance frameworks."
-  ],
-  "risk_factors": [
-    "High risk associated with Dynamic Pricing Optimization due to market volatility.",
-    "Medium risk in Predictive Inventory Management related to data accuracy.",
-    "Need for robust data governance to prevent privacy issues."
-  ],
-  "next_steps": [
-    "Assemble project team and negotiate with vendors within 30 days.",
-    "Start integration and training within 60 days.",
-    "Complete integration, conduct pilot tests, and finalize the deployment plan within 90 days."
-  ],
-  "metadata": {
-    "parsing_method": "hybrid_llm_regex",
-    "use_cases_found": 7,
-    "roadmap_phases": 3,
-    "analysis_duration_seconds": 145.9
-  }
+  ]
 }

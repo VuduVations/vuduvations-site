@@ -32,18 +32,45 @@ export default function ExecutiveDashboard({ data, sentimentChange, stockPerf, s
         </div>
 
         {/* Sentiment Evolution */}
-        <div className="bg-black/30 p-6 rounded-lg border border-green-400/20">
+        <div className={`bg-black/30 p-6 rounded-lg border ${
+          Math.abs(parseFloat(sentimentChange.change)) < 1 
+            ? 'border-blue-400/20' 
+            : sentimentChange.positive 
+              ? 'border-green-400/20' 
+              : 'border-red-400/20'
+        }`}>
           <div className="flex items-center gap-2 mb-2">
-            <TrendingUp className="w-5 h-5 text-green-400" />
+            <TrendingUp className={`w-5 h-5 ${
+              Math.abs(parseFloat(sentimentChange.change)) < 1 
+                ? 'text-blue-400' 
+                : sentimentChange.positive 
+                  ? 'text-green-400' 
+                  : 'text-red-400'
+            }`} />
             <div className="text-sm text-gray-400">Sentiment Evolution</div>
           </div>
           <div className="flex items-center gap-2">
-            <div className="text-3xl font-bold text-green-400">
-              {sentimentChange.positive ? '+' : ''}{sentimentChange.change}%
-            </div>
-            <ArrowUpRight className="w-6 h-6 text-green-400" />
+            {Math.abs(parseFloat(sentimentChange.change)) < 1 ? (
+              <>
+                <div className="text-3xl font-bold text-blue-400">Stable</div>
+                <div className="text-xl text-blue-400/60">({sentimentChange.change}%)</div>
+              </>
+            ) : (
+              <>
+                <div className={`text-3xl font-bold ${sentimentChange.positive ? 'text-green-400' : 'text-red-400'}`}>
+                  {sentimentChange.positive ? '+' : ''}{sentimentChange.change}%
+                </div>
+                {sentimentChange.positive ? (
+                  <ArrowUpRight className="w-6 h-6 text-green-400" />
+                ) : (
+                  <ArrowDownRight className="w-6 h-6 text-red-400" />
+                )}
+              </>
+            )}
           </div>
-          <div className="text-xs text-gray-400 mt-1">0.72 → 0.78 (Q1→Q4)</div>
+          <div className="text-xs text-gray-400 mt-1">
+            {(sentimentTrend[0].sentiment * 100).toFixed(1)}% to {(sentimentTrend[sentimentTrend.length - 1].sentiment * 100).toFixed(1)}% (Q4 2024-Q3 2025)
+          </div>
         </div>
 
         {/* Stock Performance */}
@@ -56,7 +83,7 @@ export default function ExecutiveDashboard({ data, sentimentChange, stockPerf, s
             <div className="text-3xl font-bold text-purple-400">+{stockPerf.change}%</div>
             <ArrowUpRight className="w-6 h-6 text-purple-400" />
           </div>
-          <div className="text-xs text-gray-400 mt-1">${stockPerf.q1} → ${stockPerf.q4}</div>
+          <div className="text-xs text-gray-400 mt-1">${stockPerf.q1.toFixed(2)} to ${stockPerf.q4.toFixed(2)}</div>
         </div>
 
         {/* Analysis Quality */}
@@ -66,7 +93,7 @@ export default function ExecutiveDashboard({ data, sentimentChange, stockPerf, s
             <div className="text-sm text-gray-400">Analysis Quality</div>
           </div>
           <div className="text-3xl font-bold text-orange-400">High</div>
-          <div className="text-xs text-gray-400 mt-1">4 Quarters Verified</div>
+          <div className="text-xs text-gray-400 mt-1">4 Quarters Analyzed</div>
         </div>
       </div>
 
@@ -74,7 +101,7 @@ export default function ExecutiveDashboard({ data, sentimentChange, stockPerf, s
       <div className="bg-black/30 p-6 rounded-lg border border-white/10">
         <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
           <LineChart className="w-5 h-5 text-blue-400" />
-          Sentiment & Stock Price Trend (2024)
+          Sentiment & Stock Price Trend ()
         </h3>
         
         <div className="grid grid-cols-4 gap-4 mb-4">
@@ -83,7 +110,7 @@ export default function ExecutiveDashboard({ data, sentimentChange, stockPerf, s
               <div className="text-xs text-gray-400 mb-1">{item.quarter}</div>
               <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg p-4 border border-white/10">
                 <div className="text-2xl font-bold text-blue-400 mb-1">
-                  {item.sentiment.toFixed(2)}
+                  {(item.sentiment * 100).toFixed(1)}%
                 </div>
                 <div className="text-xs text-gray-400 mb-2">Sentiment</div>
                 <div className="text-lg font-semibold text-white mb-1">
@@ -94,7 +121,7 @@ export default function ExecutiveDashboard({ data, sentimentChange, stockPerf, s
                   item.reaction > 0 ? 'text-green-400' : 'text-red-400'
                 }`}>
                   {item.reaction > 0 ? <ArrowUpRight className="w-3 h-3" /> : <ArrowDownRight className="w-3 h-3" />}
-                  {item.reaction > 0 ? '+' : ''}{item.reaction}%
+                  {item.reaction > 0 ? '+' : ''}{item.reaction.toFixed(2)}%
                 </div>
               </div>
             </div>
@@ -112,9 +139,9 @@ export default function ExecutiveDashboard({ data, sentimentChange, stockPerf, s
           />
         </div>
         <div className="flex justify-between text-xs text-gray-400 mt-1">
-          <span>0.50 (Neutral)</span>
-          <span>0.75 (Positive)</span>
-          <span>1.00 (Very Positive)</span>
+          <span>50% (Neutral)</span>
+          <span>75% (Positive)</span>
+          <span>100% (Very Positive)</span>
         </div>
       </div>
     </div>

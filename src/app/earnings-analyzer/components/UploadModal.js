@@ -12,7 +12,7 @@ export default function UploadModal({ showUploadModal, setShowUploadModal }) {
         <h3 className="text-2xl font-bold mb-4">Strategy Consulting-Grade Analysis</h3>
         <p className="text-gray-300 mb-6">
           Get the same level of strategic earnings analysis that firms like McKinsey, Bain, 
-          and BCG provide to Fortune 500 companies—delivered in minutes, not weeks. 
+          and BCG provide to Fortune 500 companiesâ€”delivered in minutes, not weeks. 
           Simply provide the company ticker or upload earnings transcripts.
         </p>
         
@@ -47,7 +47,7 @@ export default function UploadModal({ showUploadModal, setShowUploadModal }) {
             Perfect For:
           </div>
           <div className="text-xs text-gray-300">
-            Investment professionals • Financial advisors • Equity analysts • Portfolio managers • Serious investors
+            Investment professionals â€¢ Financial advisors â€¢ Equity analysts â€¢ Portfolio managers â€¢ Serious investors
           </div>
         </div>
 

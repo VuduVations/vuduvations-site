@@ -1,488 +1,119 @@
 {
-  "status": "success",
   "company_name": "Pinnacle Financial Group",
-  "industry": "Financial Services & Banking",
-  "analysis_date": "2025-10-10",
-  "executive_summary": "AI transformation analysis completed for Pinnacle Financial Group.",
-  "top_use_cases": [
-    {
-      "title": "AI-Powered Loan Processing",
-      "department": "Finance",
-      "description": "This use case involves implementing an AI-driven system for loan processing, utilizing machine learning algorithms to assess creditworthiness and automate underwriting. It aims to reduce human intervention, speed up decision-making, and align with the strategic goal of reducing loan approval time to 48 hours.",
-      "estimated_cost": 2500000,
-      "estimated_roi": 60,
-      "estimated_savings": 4000000,
-      "cost": 2500000,
-      "roi": 60,
-      "savings": 4000000,
-      "implementation_time": "0-12 Months",
-      "key_benefits": [
-        "Annual savings: $4,000,000",
-        "ROI: 60%",
-        "Payback period: 7 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "High",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "AI-Powered Loan Processing",
-        "description": "This use case involves implementing an AI-driven system for loan processing, utilizing machine learning algorithms to assess creditworthiness and automate underwriting. It aims to reduce human intervention, speed up decision-making, and align with the strategic goal of reducing loan approval time to 48 hours.",
-        "department": "Finance",
-        "priority": "High",
-        "estimated_roi": 60,
-        "implementation_time": "0-12 Months",
-        "estimated_cost": 2500000,
-        "estimated_savings": 4000000,
-        "key_benefits": [
-          "Annual savings: $4,000,000",
-          "ROI: 60%",
-          "Payback period: 7 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
-    },
-    {
-      "title": "Advanced Fraud Detection",
-      "department": "Security",
-      "description": "Deploying an AI-based fraud detection platform will enhance real-time data analysis and anomaly detection capabilities, minimizing false positives and negatives. This use case aligns with the goal of achieving 99% fraud detection accuracy.",
-      "estimated_cost": 1800000,
-      "estimated_roi": 56,
-      "estimated_savings": 2800000,
-      "cost": 1800000,
-      "roi": 56,
-      "savings": 2800000,
-      "implementation_time": "0-12 Months",
-      "key_benefits": [
-        "Annual savings: $2,800,000",
-        "ROI: 56%",
-        "Payback period: 7 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "High",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Advanced Fraud Detection",
-        "description": "Deploying an AI-based fraud detection platform will enhance real-time data analysis and anomaly detection capabilities, minimizing false positives and negatives. This use case aligns with the goal of achieving 99% fraud detection accuracy.",
-        "department": "Security",
-        "priority": "High",
-        "estimated_roi": 56,
-        "implementation_time": "0-12 Months",
-        "estimated_cost": 1800000,
-        "estimated_savings": 2800000,
-        "key_benefits": [
-          "Annual savings: $2,800,000",
-          "ROI: 56%",
-          "Payback period: 7 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
-    },
-    {
-      "title": "AI-Driven Customer Onboarding",
-      "department": "Customer Service",
-      "description": "The AI-powered digital onboarding assistant will guide customers through the onboarding process using natural language processing and automated document verification. This solution aims to reduce onboarding time to 5 minutes, significantly improving customer experience.",
-      "estimated_cost": 1200000,
-      "estimated_roi": 50,
-      "estimated_savings": 1500000,
-      "cost": 1200000,
-      "roi": 50,
-      "savings": 1500000,
-      "implementation_time": "12-24 Months",
-      "key_benefits": [
-        "Annual savings: $1,500,000",
-        "ROI: 50%",
-        "Payback period: 9 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "Medium",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "AI-Driven Customer Onboarding",
-        "description": "The AI-powered digital onboarding assistant will guide customers through the onboarding process using natural language processing and automated document verification. This solution aims to reduce onboarding time to 5 minutes, significantly improving customer experience.",
-        "department": "Customer Service",
-        "priority": "Medium",
-        "estimated_roi": 50,
-        "implementation_time": "12-24 Months",
-        "estimated_cost": 1200000,
-        "estimated_savings": 1500000,
-        "key_benefits": [
-          "Annual savings: $1,500,000",
-          "ROI: 50%",
-          "Payback period: 9 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
-    },
-    {
-      "title": "AI-Optimized Compliance Reporting",
-      "department": "Compliance",
-      "description": "Optimizes compliance reporting by automating processes, reducing compliance costs by 40%.",
-      "estimated_cost": 1500000,
-      "estimated_roi": 60,
-      "estimated_savings": 2000000,
-      "cost": 1500000,
-      "roi": 60,
-      "savings": 2000000,
-      "implementation_time": "12-24 Months",
-      "key_benefits": [
-        "Annual savings: $2,000,000",
-        "ROI: 60%",
-        "Payback period: 9 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "High",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "AI-Optimized Compliance Reporting",
-        "description": "Optimizes compliance reporting by automating processes, reducing compliance costs by 40%.",
-        "department": "Compliance",
-        "priority": "High",
-        "estimated_roi": 60,
-        "implementation_time": "12-24 Months",
-        "estimated_cost": 1500000,
-        "estimated_savings": 2000000,
-        "key_benefits": [
-          "Annual savings: $2,000,000",
-          "ROI: 60%",
-          "Payback period: 9 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
-    },
-    {
-      "title": "AI Enhanced Call Center Operations",
-      "department": "Operations",
-      "description": "Uses AI to improve call center operations, aiming to increase the Net Promoter Score to 65+.",
-      "estimated_cost": 1000000,
-      "estimated_roi": 48,
-      "estimated_savings": 1200000,
-      "cost": 1000000,
-      "roi": 48,
-      "savings": 1200000,
-      "implementation_time": "24-36 Months",
-      "key_benefits": [
-        "Annual savings: $1,200,000",
-        "ROI: 48%",
-        "Payback period: 10 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "Medium",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "AI Enhanced Call Center Operations",
-        "description": "Uses AI to improve call center operations, aiming to increase the Net Promoter Score to 65+.",
-        "department": "Operations",
-        "priority": "Medium",
-        "estimated_roi": 48,
-        "implementation_time": "24-36 Months",
-        "estimated_cost": 1000000,
-        "estimated_savings": 1200000,
-        "key_benefits": [
-          "Annual savings: $1,200,000",
-          "ROI: 48%",
-          "Payback period: 10 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
-    },
-    {
-      "title": "Automated Account Reconciliation",
-      "department": "Finance",
-      "description": "Enhances accuracy and operational efficiency in account reconciliation through automation.",
-      "estimated_cost": 800000,
-      "estimated_roi": 50,
-      "estimated_savings": 1000000,
-      "cost": 800000,
-      "roi": 50,
-      "savings": 1000000,
-      "implementation_time": "24-36 Months",
-      "key_benefits": [
-        "Annual savings: $1,000,000",
-        "ROI: 50%",
-        "Payback period: 9 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "Low",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Automated Account Reconciliation",
-        "description": "Enhances accuracy and operational efficiency in account reconciliation through automation.",
-        "department": "Finance",
-        "priority": "Low",
-        "estimated_roi": 50,
-        "implementation_time": "24-36 Months",
-        "estimated_cost": 800000,
-        "estimated_savings": 1000000,
-        "key_benefits": [
-          "Annual savings: $1,000,000",
-          "ROI: 50%",
-          "Payback period: 9 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
-    },
-    {
-      "title": "Predictive Customer Insights",
-      "department": "Marketing",
-      "description": "Uses predictive analytics to enhance customer engagement and drive business growth.",
-      "estimated_cost": 2000000,
-      "estimated_roi": 63,
-      "estimated_savings": 2500000,
-      "cost": 2000000,
-      "roi": 63,
-      "savings": 2500000,
-      "implementation_time": "24-36 Months",
-      "key_benefits": [
-        "Annual savings: $2,500,000",
-        "ROI: 63%",
-        "Payback period: 9 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "High",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Predictive Customer Insights",
-        "description": "Uses predictive analytics to enhance customer engagement and drive business growth.",
-        "department": "Marketing",
-        "priority": "High",
-        "estimated_roi": 63,
-        "implementation_time": "24-36 Months",
-        "estimated_cost": 2000000,
-        "estimated_savings": 2500000,
-        "key_benefits": [
-          "Annual savings: $2,500,000",
-          "ROI: 63%",
-          "Payback period: 9 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
-    }
-  ],
-  "financial_summary": {
-    "total_investment": 10800000,
-    "expected_annual_savings": 15000000,
-    "roi_percentage": 55.285714285714285,
-    "payback_period_months": 8,
-    "npv": 26502779.864763327,
-    "irr": 55.285714285714285
+  "industry": "Financial Services",
+  "revenue": "$420M annual revenue",
+  "executive_summary": {
+    "summary": "Comprehensive AI discovery analysis for Pinnacle Financial Group identifying 7 high-value use cases across risk management, customer experience, and operational efficiency. Total potential annual savings of $18.6M with an average ROI of 105%.",
+    "total_use_cases": 7,
+    "average_roi": 105,
+    "total_investment": 5200000,
+    "total_annual_savings": 18600000
   },
-  "implementation_roadmap": [
+  "use_cases": [
     {
-      "phase": "0-12 Months",
-      "duration": "0-12 Months",
-      "use_cases": [
-        "AI-Powered Loan Processing",
-        "Advanced Fraud Detection"
-      ],
-      "key_milestones": [
-        "AI integration",
-        "Fraud system",
-        "ROI milestones"
-      ],
-      "estimated_cost": 4300000
+      "title": "AI-Powered Fraud Detection",
+      "description": "Real-time transaction monitoring system using ML to detect suspicious patterns and prevent fraudulent activities with 99% accuracy.",
+      "priority": "high",
+      "estimated_cost": 900000,
+      "estimated_savings": 4200000,
+      "estimated_roi": 367,
+      "implementation_time": "6-8 months",
+      "department": "Risk Management",
+      "key_benefits": [
+        "95% reduction in false positives",
+        "$4M annual fraud loss prevention",
+        "Real-time transaction monitoring"
+      ]
     },
     {
-      "phase": "12-24 Months",
-      "duration": "12-24 Months",
-      "use_cases": [
-        "AI-Driven Customer Onboarding",
-        "AI-Optimized Compliance Reporting"
-      ],
-      "key_milestones": [
-        "AI onboarding",
-        "Compliance Report automation"
-      ],
-      "estimated_cost": 2700000
+      "title": "Automated Loan Underwriting",
+      "description": "ML-based credit risk assessment that automates loan approval decisions, reducing processing time from days to minutes while maintaining accuracy.",
+      "priority": "high",
+      "estimated_cost": 750000,
+      "estimated_savings": 3200000,
+      "estimated_roi": 327,
+      "implementation_time": "7-10 months",
+      "department": "Lending",
+      "key_benefits": [
+        "85% faster loan processing time",
+        "Consistent credit decisions",
+        "Improved customer experience"
+      ]
     },
     {
-      "phase": "24-36 Months",
-      "duration": "24-36 Months",
-      "use_cases": [
-        "AI Enhanced Call Center Operations",
-        "Automated Account Reconciliation",
-        "Predictive Customer Insights"
-      ],
-      "key_milestones": [
-        "AI call center",
-        "Account AI",
-        "Launch predictive"
-      ],
-      "estimated_cost": 3800000
+      "title": "Regulatory Compliance Automation",
+      "description": "AI system that monitors transactions for AML, KYC, and regulatory compliance, automating reporting and reducing manual review workload.",
+      "priority": "high",
+      "estimated_cost": 850000,
+      "estimated_savings": 2800000,
+      "estimated_roi": 229,
+      "implementation_time": "8-12 months",
+      "department": "Compliance",
+      "key_benefits": [
+        "70% reduction in manual compliance reviews",
+        "Improved regulatory audit outcomes",
+        "Real-time suspicious activity detection"
+      ]
+    },
+    {
+      "title": "Intelligent Customer Service",
+      "description": "AI-powered virtual assistant that handles routine banking inquiries, account questions, and transaction support through chat and voice.",
+      "priority": "medium",
+      "estimated_cost": 480000,
+      "estimated_savings": 2100000,
+      "estimated_roi": 338,
+      "implementation_time": "4-6 months",
+      "department": "Customer Service",
+      "key_benefits": [
+        "60% reduction in call center volume",
+        "24/7 customer support availability",
+        "Improved customer satisfaction scores"
+      ]
+    },
+    {
+      "title": "Personalized Financial Advisory",
+      "description": "AI-driven robo-advisor that provides personalized investment recommendations and portfolio management for retail customers.",
+      "priority": "medium",
+      "estimated_cost": 700000,
+      "estimated_savings": 2400000,
+      "estimated_roi": 243,
+      "implementation_time": "6-9 months",
+      "department": "Wealth Management",
+      "key_benefits": [
+        "Democratized access to financial advice",
+        "Scalable advisory services",
+        "Increased AUM through better engagement"
+      ]
+    },
+    {
+      "title": "Churn Prediction and Retention",
+      "description": "ML model that identifies customers at risk of leaving and triggers personalized retention campaigns with targeted offers and outreach.",
+      "priority": "medium",
+      "estimated_cost": 420000,
+      "estimated_savings": 1900000,
+      "estimated_roi": 352,
+      "implementation_time": "4-5 months",
+      "department": "Customer Experience",
+      "key_benefits": [
+        "50% improvement in customer retention",
+        "Proactive relationship management",
+        "Reduced customer acquisition costs"
+      ]
+    },
+    {
+      "title": "Document Processing Automation",
+      "description": "Intelligent document processing that extracts data from loan applications, statements, and contracts using OCR and NLP, reducing manual data entry.",
+      "priority": "low",
+      "estimated_cost": 380000,
+      "estimated_savings": 2000000,
+      "estimated_roi": 426,
+      "implementation_time": "5-6 months",
+      "department": "Operations",
+      "key_benefits": [
+        "90% reduction in manual data entry",
+        "Faster document processing",
+        "Improved data accuracy"
+      ]
     }
-  ],
-  "strategic_recommendations": [
-    "Prioritize AI-Powered Loan Processing and Advanced Fraud Detection in early phases.",
-    "Implement AI solutions in phases for alignment with strategic objectives.",
-    "Focus on achieving significant operational efficiencies."
-  ],
-  "risk_factors": [
-    "High risk in Loan Processing and Compliance Reporting.",
-    "Medium risk in Fraud Detection, Customer Onboarding, and Call Center Operations.",
-    "Low risk in Automated Account Reconciliation."
-  ],
-  "next_steps": [
-    "Finalize vendor contracts and conduct planning workshops within 30 days.",
-    "Initiate pilot projects for loan processing and fraud detection within 60 days.",
-    "Complete initial system integrations and train staff within 90 days."
-  ],
-  "metadata": {
-    "parsing_method": "hybrid_llm_regex",
-    "use_cases_found": 7,
-    "roadmap_phases": 3,
-    "analysis_duration_seconds": 126.9
-  }
+  ]
 }

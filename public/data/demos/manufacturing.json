@@ -1,484 +1,119 @@
 {
-  "status": "success",
   "company_name": "PrecisionTech Manufacturing",
   "industry": "Industrial Manufacturing",
-  "analysis_date": "2025-10-10",
-  "executive_summary": "AI transformation analysis completed for PrecisionTech Manufacturing.",
-  "top_use_cases": [
+  "revenue": "$250M annual revenue",
+  "executive_summary": {
+    "summary": "Comprehensive AI discovery analysis for PrecisionTech Manufacturing identifying 7 high-impact use cases across predictive maintenance, quality control, and supply chain optimization. Total potential annual savings of $15.2M with an average ROI of 111%.",
+    "total_use_cases": 7,
+    "average_roi": 111,
+    "total_investment": 4200000,
+    "total_annual_savings": 15200000
+  },
+  "use_cases": [
     {
-      "title": "Predictive Maintenance",
-      "department": "Manufacturing",
-      "description": "Implement AI to predict equipment failures, minimizing downtime and maintenance costs.",
-      "estimated_cost": 1200000,
-      "estimated_roi": 150,
-      "estimated_savings": 3000000,
-      "cost": 1200000,
-      "roi": 150,
-      "savings": 3000000,
-      "implementation_time": "0-12 months",
+      "title": "Predictive Equipment Maintenance",
+      "description": "AI-powered predictive maintenance system using sensor data and machine learning to predict equipment failures before they occur, reducing unplanned downtime by 60%.",
+      "priority": "high",
+      "estimated_cost": 800000,
+      "estimated_savings": 3200000,
+      "estimated_roi": 300,
+      "implementation_time": "6-9 months",
+      "department": "Operations",
       "key_benefits": [
-        "Annual savings: $3,000,000",
-        "ROI: 150%",
-        "Payback period: 4 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "High",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Predictive Maintenance",
-        "description": "Implement AI to predict equipment failures, minimizing downtime and maintenance costs.",
-        "department": "Manufacturing",
-        "priority": "High",
-        "estimated_roi": 150,
-        "implementation_time": "0-12 months",
-        "estimated_cost": 1200000,
-        "estimated_savings": 3000000,
-        "key_benefits": [
-          "Annual savings: $3,000,000",
-          "ROI: 150%",
-          "Payback period: 4 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
+        "60% reduction in unplanned downtime",
+        "Extend equipment lifespan by 25%",
+        "Reduce maintenance costs by 30%"
+      ]
     },
     {
-      "title": "Quality Inspection Automation",
-      "department": "Manufacturing",
-      "description": "Use AI-powered vision systems for real-time defect detection, improving product quality.",
-      "estimated_cost": 1800000,
-      "estimated_roi": 94,
-      "estimated_savings": 2500000,
-      "cost": 1800000,
-      "roi": 94,
-      "savings": 2500000,
-      "implementation_time": "12-24 months",
+      "title": "Computer Vision Quality Control",
+      "description": "Automated visual inspection system using computer vision to detect defects in real-time, improving quality and reducing waste.",
+      "priority": "high",
+      "estimated_cost": 650000,
+      "estimated_savings": 2400000,
+      "estimated_roi": 269,
+      "implementation_time": "4-6 months",
+      "department": "Quality Assurance",
       "key_benefits": [
-        "Annual savings: $2,500,000",
-        "ROI: 94%",
-        "Payback period: 8 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "High",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Quality Inspection Automation",
-        "description": "Use AI-powered vision systems for real-time defect detection, improving product quality.",
-        "department": "Manufacturing",
-        "priority": "High",
-        "estimated_roi": 94,
-        "implementation_time": "12-24 months",
-        "estimated_cost": 1800000,
-        "estimated_savings": 2500000,
-        "key_benefits": [
-          "Annual savings: $2,500,000",
-          "ROI: 94%",
-          "Payback period: 8 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
+        "95% defect detection accuracy",
+        "50% reduction in quality-related waste",
+        "Real-time production line alerts"
+      ]
     },
     {
-      "title": "Supply Chain Visibility Enhancement",
+      "title": "Supply Chain Demand Forecasting",
+      "description": "ML-based demand forecasting that analyzes historical sales data, market trends, and external factors to optimize inventory levels.",
+      "priority": "high",
+      "estimated_cost": 500000,
+      "estimated_savings": 2800000,
+      "estimated_roi": 460,
+      "implementation_time": "5-7 months",
       "department": "Supply Chain",
-      "description": "Integrate AI for real-time data analysis, enhancing decision-making and delivery rates.",
-      "estimated_cost": 1000000,
-      "estimated_roi": 80,
-      "estimated_savings": 1800000,
-      "cost": 1000000,
-      "roi": 80,
-      "savings": 1800000,
-      "implementation_time": "24-36 months",
       "key_benefits": [
-        "Annual savings: $1,800,000",
-        "ROI: 80%",
-        "Payback period: 6 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "Medium",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Supply Chain Visibility Enhancement",
-        "description": "Integrate AI for real-time data analysis, enhancing decision-making and delivery rates.",
-        "department": "Supply Chain",
-        "priority": "Medium",
-        "estimated_roi": 80,
-        "implementation_time": "24-36 months",
-        "estimated_cost": 1000000,
-        "estimated_savings": 1800000,
-        "key_benefits": [
-          "Annual savings: $1,800,000",
-          "ROI: 80%",
-          "Payback period: 6 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
-    },
-    {
-      "title": "Automated Safety Inspections",
-      "department": "Safety/Compliance",
-      "description": "AI-driven safety checks for hazard identification, improving operational equipment efficiency.",
-      "estimated_cost": 1500000,
-      "estimated_roi": 113,
-      "estimated_savings": 2200000,
-      "cost": 1500000,
-      "roi": 113,
-      "savings": 2200000,
-      "implementation_time": "24-36 months",
-      "key_benefits": [
-        "Annual savings: $2,200,000",
-        "ROI: 113%",
-        "Payback period: 8 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "Medium",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Automated Safety Inspections",
-        "description": "AI-driven safety checks for hazard identification, improving operational equipment efficiency.",
-        "department": "Safety/Compliance",
-        "priority": "Medium",
-        "estimated_roi": 113,
-        "implementation_time": "24-36 months",
-        "estimated_cost": 1500000,
-        "estimated_savings": 2200000,
-        "key_benefits": [
-          "Annual savings: $2,200,000",
-          "ROI: 113%",
-          "Payback period: 8 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
+        "35% reduction in inventory carrying costs",
+        "Stockout reduction by 70%",
+        "Improved supplier negotiation leverage"
+      ]
     },
     {
       "title": "Energy Consumption Optimization",
+      "description": "AI system that monitors and optimizes energy usage across facilities, reducing costs and improving sustainability.",
+      "priority": "medium",
+      "estimated_cost": 400000,
+      "estimated_savings": 1200000,
+      "estimated_roi": 200,
+      "implementation_time": "4-5 months",
+      "department": "Facilities",
+      "key_benefits": [
+        "25% reduction in energy costs",
+        "Carbon footprint reduction",
+        "Peak demand management"
+      ]
+    },
+    {
+      "title": "Production Scheduling Optimization",
+      "description": "Intelligent scheduling system that optimizes production runs based on demand, capacity constraints, and changeover times.",
+      "priority": "medium",
+      "estimated_cost": 550000,
+      "estimated_savings": 1800000,
+      "estimated_roi": 227,
+      "implementation_time": "6-8 months",
       "department": "Operations",
-      "description": "AI to reduce energy waste and costs, optimizing consumption.",
-      "estimated_cost": 900000,
-      "estimated_roi": 122,
-      "estimated_savings": 1600000,
-      "cost": 900000,
-      "roi": 122,
-      "savings": 1600000,
-      "implementation_time": "0-12 months",
       "key_benefits": [
-        "Annual savings: $1,600,000",
-        "ROI: 122%",
-        "Payback period: 6 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "Low",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Energy Consumption Optimization",
-        "description": "AI to reduce energy waste and costs, optimizing consumption.",
-        "department": "Operations",
-        "priority": "Low",
-        "estimated_roi": 122,
-        "implementation_time": "0-12 months",
-        "estimated_cost": 900000,
-        "estimated_savings": 1600000,
-        "key_benefits": [
-          "Annual savings: $1,600,000",
-          "ROI: 122%",
-          "Payback period: 6 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
+        "40% reduction in changeover time",
+        "Throughput increase of 20%",
+        "Better capacity utilization"
+      ]
     },
     {
-      "title": "Intelligent Production Scheduling",
-      "department": "Production",
-      "description": "AI tools for efficient production scheduling, improving operational equipment efficiency.",
-      "estimated_cost": 1100000,
-      "estimated_roi": 100,
-      "estimated_savings": 2000000,
-      "cost": 1100000,
-      "roi": 100,
-      "savings": 2000000,
-      "implementation_time": "24-36 months",
+      "title": "Worker Safety Monitoring",
+      "description": "Computer vision and IoT sensors monitor worker safety compliance and detect potential hazards in real-time.",
+      "priority": "medium",
+      "estimated_cost": 450000,
+      "estimated_savings": 1500000,
+      "estimated_roi": 233,
+      "implementation_time": "5-6 months",
+      "department": "Safety & Compliance",
       "key_benefits": [
-        "Annual savings: $2,000,000",
-        "ROI: 100%",
-        "Payback period: 6 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "Low",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Intelligent Production Scheduling",
-        "description": "AI tools for efficient production scheduling, improving operational equipment efficiency.",
-        "department": "Production",
-        "priority": "Low",
-        "estimated_roi": 100,
-        "implementation_time": "24-36 months",
-        "estimated_cost": 1100000,
-        "estimated_savings": 2000000,
-        "key_benefits": [
-          "Annual savings: $2,000,000",
-          "ROI: 100%",
-          "Payback period: 6 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
+        "60% reduction in safety incidents",
+        "Lower workers comp insurance costs",
+        "Improved regulatory compliance"
+      ]
     },
     {
-      "title": "Demand Forecasting",
-      "department": "Logistics",
-      "description": "AI for precise demand and inventory management.",
-      "estimated_cost": 950000,
-      "estimated_roi": 116,
-      "estimated_savings": 1700000,
-      "cost": 950000,
-      "roi": 116,
-      "savings": 1700000,
-      "implementation_time": "24-36 months",
+      "title": "Supplier Quality Analytics",
+      "description": "AI-powered analysis of supplier performance, quality metrics, and risk factors to optimize supplier selection and management.",
+      "priority": "low",
+      "estimated_cost": 350000,
+      "estimated_savings": 1300000,
+      "estimated_roi": 271,
+      "implementation_time": "4-5 months",
+      "department": "Procurement",
       "key_benefits": [
-        "Annual savings: $1,700,000",
-        "ROI: 116%",
-        "Payback period: 6 months"
-      ],
-      "technical_requirements": [
-        "AI/ML Platform",
-        "Data Integration",
-        "Change Management"
-      ],
-      "success_metrics": [],
-      "risks": [],
-      "vendors": [
-        "OpenAI",
-        "Anthropic",
-        "Google Cloud AI"
-      ],
-      "priority": "Medium",
-      "feasibility": "Medium",
-      "impact": "Medium",
-      "_original": {
-        "title": "Demand Forecasting",
-        "description": "AI for precise demand and inventory management.",
-        "department": "Logistics",
-        "priority": "Medium",
-        "estimated_roi": 116,
-        "implementation_time": "24-36 months",
-        "estimated_cost": 950000,
-        "estimated_savings": 1700000,
-        "key_benefits": [
-          "Annual savings: $1,700,000",
-          "ROI: 116%",
-          "Payback period: 6 months"
-        ],
-        "technical_requirements": [
-          "AI/ML Platform",
-          "Data Integration",
-          "Change Management"
-        ],
-        "vendors": [
-          "OpenAI",
-          "Anthropic",
-          "Google Cloud AI"
-        ],
-        "complexity": "High"
-      }
+        "25% reduction in supplier-related defects",
+        "Improved supplier selection accuracy",
+        "Proactive risk mitigation"
+      ]
     }
-  ],
-  "financial_summary": {
-    "total_investment": 8450000,
-    "expected_annual_savings": 14800000,
-    "roi_percentage": 110.71428571428571,
-    "payback_period_months": 6,
-    "npv": 28355409.46656649,
-    "irr": 110.71428571428571
-  },
-  "implementation_roadmap": [
-    {
-      "phase": "Phase 1",
-      "duration": "0-12 months",
-      "use_cases": [
-        "Predictive Maintenance",
-        "Energy Consumption Optimization"
-      ],
-      "key_milestones": [
-        "Implement AI, 40% downtime reduction",
-        "20% reduction in energy consumption"
-      ],
-      "estimated_cost": 2100000
-    },
-    {
-      "phase": "Phase 2",
-      "duration": "12-24 months",
-      "use_cases": [
-        "Quality Inspection Automation"
-      ],
-      "key_milestones": [
-        "Reduce defects to below 2%"
-      ],
-      "estimated_cost": 1800000
-    },
-    {
-      "phase": "Phase 3",
-      "duration": "24-36 months",
-      "use_cases": [
-        "Supply Chain Visibility Enhancement",
-        "Automated Safety Inspections",
-        "Intelligent Production Scheduling",
-        "Demand Forecasting"
-      ],
-      "key_milestones": [
-        "Achieve 99% on-time delivery",
-        "Improve OEE to 85%",
-        "Enhance inventory management"
-      ],
-      "estimated_cost": 4550000
-    }
-  ],
-  "strategic_recommendations": [
-    "Adopt a phased implementation strategy prioritizing high-impact use cases.",
-    "Focus on vendor support and integration with existing systems."
-  ],
-  "risk_factors": [
-    "Technical risks with data quality and system integration.",
-    "Integration with existing systems like Siemens MES, SAP ERP."
-  ],
-  "next_steps": [
-    "Secure funding, assemble teams, initiate training.",
-    "Begin Phase 1 implementations, establish KPIs.",
-    "Review progress, adjust plans, prepare for Phase 2."
-  ],
-  "metadata": {
-    "parsing_method": "hybrid_llm_regex",
-    "use_cases_found": 7,
-    "roadmap_phases": 3,
-    "analysis_duration_seconds": 175.5
-  }
+  ]
 }
